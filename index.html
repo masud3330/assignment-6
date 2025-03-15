@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sarkar</title>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@5" rel="stylesheet" type="text/css" />
+<script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+<body>
+
+    <header>
+        <!-- navbar -->
+        <nav class="flex justify-between items-center p-4 max-w-7xl mx-auto mt-2 bg-[#F8F8F8]">
+            <div class="flex  items-center">
+                <h1 class="text-xl font-semibold">English</h1>
+                <img src="./assets//logo.png" alt="" class="w-10">
+            </div>
+            <div >
+                <a href="" class="btn btn-outline btn-primary btn-sm">FAQ</a>
+                <a href="" class="btn btn-outline btn-primary btn-sm">Learn</a>
+                <a href="" class="btn btn-outline btn-primary btn-sm">Logout</a>
+            </div>
+        </nav>
+
+       <!-- banner section -->
+        <div id="mainBanner" class="flex justify-between items-center p-4 max-w-7xl mx-auto mt-2">
+            <div class="space-y-5">
+                <h1 class="text-3xl font-bold"><span class="text-[#00BCFF]">English</span> is Easy!!</h1>
+                <p class="w-2/3">আজ থেকেই আপনার ভাষা শেখার যাত্রা শুরু করুন। আপনি যদি নতুন হন অথবা আপনার দক্ষতা বাড়াতে চান, আমাদের Interactive Lessons আপনাকে নিয়ে যাবে অন্য একটি Level এ</p>
+                <input type="text" placeholder="Write Name" className="input" id="name"/><br>
+                <input type="number" placeholder="Code 12345" className="input" id="id" /><br>
+                <button class="btn btn-primary" onclick="getStartBtn()">get Started</button>
+            </div>
+            <div>
+                <img src="/assets/hero-student.png" alt="">
+            </div>
+        </div>
+    </header>
+    <!-- main section -->
+    <main>
+        <!-- Vocabularies section -->
+         <div class="space-y-3">
+            <h1 class="text-xl font-bold text-center"><span class="text-[#00BCFF]">Let's</span> Learn Vocabularies</h1>
+            <div  id="VocabulariesBtnShow" class="flex gap-4 justify-center">
+
+            </div>
+         </div>
+         <div id="VocabulariescardShow" class="max-w-7xl mx-auto p-3 grid md:grid-cols-2 lg:grid-cols-4 gap-5 ">
+        </div>
+
+        <!-- freqently ask question -->
+         <div class="max-w-7xl mx-auto space-y-3">
+            <h1 class="text-xl font-bold text-center"><span class="text-[#00BCFF]">Frequently</span> Asked Questions</h1>
+
+            <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+                <input type="radio" name="my-accordion-2" checked="checked" />
+                <div class="collapse-title font-semibold">How do I create an account?</div>
+                <div class="collapse-content text-sm">Click the "Sign Up" button in the top right corner and follow the registration process.</div>
+              </div>
+              <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title font-semibold">I forgot my password. What should I do?</div>
+                <div class="collapse-content text-sm">Click on "Forgot Password" on the login page and follow the instructions sent to your email.</div>
+              </div>
+              <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title font-semibold">How do I update my profile information?</div>
+                <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make changes.</div>
+              </div>
+              <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title font-semibold">How do I update my profile information?</div>
+                <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make changes.</div>
+              </div>
+              <div class="collapse collapse-arrow bg-base-100 border border-base-300">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title font-semibold">How do I update my profile information?</div>
+                <div class="collapse-content text-sm">Go to "My Account" settings and select "Edit Profile" to make changes.</div>
+              </div>
+         </div>
+    </main>
+
+    <footer class="max-w-7xl mx-auto my-10 bg-[#F8F8F8] py-5 px-2">
+        <div class="flex justify-between items-center">
+            <div>
+                <div class="flex  items-center">
+                    <h1 class="text-xl font-semibold">English</h1>
+                    <img src="./assets//logo.png" alt="" class="w-10">
+                </div>
+                <h1 class="text-lg font-semibold"> ইংরেজি শিখুন সহজে</h1>
+                <p>Providing ED-Tech Applications since 2025</p>
+               
+            </div>
+            <div>
+                <p>FOLLOW US</p>
+                <div class="flex gap-3 items-center">
+                    <img src="/assets/fb-thumb.png" alt="">
+                <img src="/assets/github-thumb.png" alt="">
+                <img src="/assets/instagram-thumb.png" alt="">
+                <img src="/assets/youtube-thumb.png" alt="">
+                </div>
+            </div>
+        </div>
+    </footer>
+    
+    <script src="/script.js"></script>
+</body>
+</html>
