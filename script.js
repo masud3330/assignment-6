@@ -1,7 +1,4 @@
- // pore delete korte hobe
- const faq= document.getElementById("faq").classList.remove("hidden")
- const navbar= document.getElementById("navbar").classList.remove("hidden")
- const VocabulariesSection= document.getElementById("VocabulariesSection").classList.remove("hidden")
+ 
 // hide banner
 const getStartBtn= ()=>{
     const name= document.getElementById("name").value
@@ -11,9 +8,9 @@ const getStartBtn= ()=>{
    if(id==123456){
     const mainBanner= document.getElementById("mainBanner").classList.add("hidden")
     // pore uncomment korte hobe
-    // const faq= document.getElementById("faq").classList.remove("hidden")
-    // const navbar= document.getElementById("navbar").classList.remove("hidden")
-    // const VocabulariesSection= document.getElementById("VocabulariesSection").classList.remove("hidden")
+    const faq= document.getElementById("faq").classList.remove("hidden")
+    const navbar= document.getElementById("navbar").classList.remove("hidden")
+    const VocabulariesSection= document.getElementById("VocabulariesSection").classList.remove("hidden")
    }
    else{
     Swal.fire({
