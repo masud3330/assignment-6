@@ -11,6 +11,8 @@ const getStartBtn= ()=>{
     const faq= document.getElementById("faq").classList.remove("hidden")
     const navbar= document.getElementById("navbar").classList.remove("hidden")
     const VocabulariesSection= document.getElementById("VocabulariesSection").classList.remove("hidden")
+    const beforeTheLessonSelectMsg= document.getElementById("beforeTheLessonSelectMsg").classList.remove("hidden")
+
    }
    else{
     Swal.fire({
@@ -56,6 +58,7 @@ const loadLevelWiseData=(id)=>{
 
 const displayLevelWiseData =(data)=>{
     const VocabulariescardShow= document.getElementById("VocabulariescardShow")
+    
     VocabulariescardShow.innerHTML=""
     // console.log(data)
      if(data.length > 0){
