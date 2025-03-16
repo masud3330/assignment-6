@@ -1,4 +1,4 @@
- 
+
 // hide banner
 const getStartBtn= ()=>{
     const name= document.getElementById("name").value
@@ -63,6 +63,7 @@ const displayLevelWiseData =(data)=>{
     // console.log(data)
      if(data.length > 0){
         data.forEach(item=>{
+            
             const div= document.createElement("div")
             div.innerHTML=`
       <div class="card-body card bg-base-100 shadow-md">
@@ -70,7 +71,7 @@ const displayLevelWiseData =(data)=>{
         <p class="" >Meaning /Pronounciation</p>
         <h2 class="text-semibold ">${item.meaning} / ${item.pronunciation}</h2>
         <div class="flex justify-between">
-        <a class=" btn" onclick="wordInfo(${item})"><i class="fa-solid fa-circle-info"></i></a>
+        <a class=" btn" onclick="wordInfo('${item.id}')"><i class="fa-solid fa-circle-info"></i></a>
         <a class=" btn"><i class="fa-solid fa-volume-high"></i></a>
         </div>
         
@@ -97,8 +98,38 @@ const displayLevelWiseData =(data)=>{
     }
     
 }
-const wordInfo= (data)=>{
-    console.log(data)
+const wordInfo= (id)=>{
+    fetch(`https://openapi.programming-hero.com/api/word/${id}`)
+    .then(res=> res.json())
+    .then(data=>{
+        console.log(data.data)
+    // {word: 'Eager', meaning: 'আগ্রহী', pronunciation: 'ইগার', level: 1, sentence: 'The kids were eager to open their gifts.', …}
+    const word= data.data   
+    if(data.data){
+        Swal.fire({
+            title: `${word.word}`,
+            
+            html:`
+            <p>meaning</p>
+    <p>${word.meaning}</p>
+    <p>Example</p>
+    <p>${word.sentence }</p>
+    <p>synonyms</p>
+  <button>
+  ${(word.synonyms) }.
+  </button>
+            `,
+            
+            
+            confirmButtonColor: "#3085d6",
+            cancelButtonColor: "#d33",
+            
+          })
+       }
+    })
+    .catch(err=>{
+        console.log(err)
+    })
 }
 
 
